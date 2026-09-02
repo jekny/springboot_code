@@ -1,5 +1,7 @@
 spring:
   application:
       name: springboot_005
-name: orderyes
-age: 20
+
+order1:
+    name: orderyes
+    age: 20

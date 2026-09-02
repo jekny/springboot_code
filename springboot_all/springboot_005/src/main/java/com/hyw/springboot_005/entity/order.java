@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class order {
-    @Value("${name}")
+    @Value("${order1.name}")
     String name;
-    @Value("${age}")
+    @Value("${order1.age}")
     Integer age;
 }
