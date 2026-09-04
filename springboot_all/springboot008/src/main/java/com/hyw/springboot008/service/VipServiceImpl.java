@@ -16,11 +16,13 @@ import org.springframework.stereotype.Service;
  * @Version 1.0
  */
 @Service
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class VipServiceImpl implements VipService{
 
 
-    private final VipMapper vipMapper;
+//    private final VipMapper vipMapper;
+    @Autowired
+    VipMapper vipMapper;
     @Override
     public void getall() {
         System.out.println(vipMapper.listall());
