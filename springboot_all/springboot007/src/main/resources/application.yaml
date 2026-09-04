@@ -8,3 +8,23 @@ age: 20
 address:
   a: 天津
   b: 北京
+
+my:
+  leixing:
+    lists:
+      - a: 田径1
+        b: 北京1
+      - a: 田径2
+        b: 北京2
+    maps:
+      S1:
+          a: 2
+          b: 2
+      S2:
+          a: 3
+          b: 3
+    strings:
+      - a: 2
+        b: 2
+      - a: 3
+        b: 3
