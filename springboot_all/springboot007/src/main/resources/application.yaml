@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: springboot007
+
+
+costomerName: lihua
+age: 20
+address:
+  a: 天津
+  b: 北京

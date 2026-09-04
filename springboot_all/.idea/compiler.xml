@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_005" />
         <module name="springboot006" />
+        <module name="springboot007" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot006" options="-parameters" />
+      <module name="springboot007" options="-parameters" />
       <module name="springboot_005" options="-parameters" />
     </option>
   </component>
