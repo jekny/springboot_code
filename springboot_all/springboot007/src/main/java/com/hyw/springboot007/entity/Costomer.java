@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @Create 2026/9/4 10:02
  * @Version 1.0
  */
-@Configuration(proxyBeanMethods = false)
+//@Configuration(proxyBeanMethods = false)
 @Data
 @ConfigurationProperties
 public class Costomer {
