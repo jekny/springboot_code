@@ -1,0 +1,7 @@
+spring:
+  application:
+      name: springboot006
+  config:
+    import:
+      - classpath:config1/config.yaml
+      - classpath:config1/config2.yaml

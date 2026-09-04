@@ -1,0 +1,3 @@
+spring:
+  my:
+    name: config1
