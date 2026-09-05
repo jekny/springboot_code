@@ -17,5 +17,5 @@ import java.util.List;
 public interface VipMapper {
     List<Vip> listall();
 
-    List<Vip> getid(String id);
+    Vip getid(String id);
 }

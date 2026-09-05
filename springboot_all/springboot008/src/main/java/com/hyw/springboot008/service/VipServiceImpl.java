@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * ClassName: VipServiceImpl
  * Description:
@@ -24,13 +26,14 @@ public class VipServiceImpl implements VipService{
     @Autowired
     VipMapper vipMapper;
     @Override
-    public void getall() {
-        System.out.println(vipMapper.listall());
+    public List<Vip> getall() {
+        return vipMapper.listall();
     }
 
     @Override
-    public void getId(String id) {
-        System.out.println(vipMapper.getid(id));
+    public Vip getId(String id) {
+        Vip getid = vipMapper.getid(id);
+        return getid;
     }
 
 

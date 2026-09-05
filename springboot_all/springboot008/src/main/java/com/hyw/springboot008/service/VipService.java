@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 public interface VipService {
-    void getall();
+    List<Vip> getall();
 
-    void getId(String id);
+    Vip getId(String id);
 }
