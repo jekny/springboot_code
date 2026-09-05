@@ -27,4 +27,11 @@ public class VipServiceImpl implements VipService{
     public void getall() {
         System.out.println(vipMapper.listall());
     }
+
+    @Override
+    public void getId(String id) {
+        System.out.println(vipMapper.getid(id));
+    }
+
+
 }
