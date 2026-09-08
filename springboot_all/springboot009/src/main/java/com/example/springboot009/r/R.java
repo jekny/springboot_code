@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * ClassName: R
- * Description:
+ * Description:直接复制过来的R对象
  *
  * @Author jekny
  * @Create 2026/9/7 19:04
