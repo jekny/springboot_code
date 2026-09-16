@@ -9,6 +9,7 @@
         <module name="springboot009" />
         <module name="springboot_005" />
         <module name="springboot007" />
+        <module name="springboot010" />
         <module name="springboot008" />
         <module name="springboot006" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="springboot007" options="-parameters" />
       <module name="springboot008" options="-parameters" />
       <module name="springboot009" options="-parameters" />
+      <module name="springboot010" options="-parameters" />
       <module name="springboot_005" options="-parameters" />
     </option>
   </component>
