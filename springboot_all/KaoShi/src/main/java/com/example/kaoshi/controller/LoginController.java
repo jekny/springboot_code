@@ -3,6 +3,7 @@ package com.example.kaoshi.controller;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.example.kaoshi.entity.SysUser;
 import com.example.kaoshi.service.SysUserService;
+import com.example.kaoshi.service.impl.SysUserServiceImpl;
 import com.example.kaoshi.utils.JwtUtil;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
@@ -25,7 +26,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class LoginController {
 
     @Autowired
-    private SysUserService sysUserService;
+    private SysUserServiceImpl sysUserService;
 
     @GetMapping("/toLogin")
     public String toLogin(){
@@ -50,9 +51,13 @@ public class LoginController {
         cookie.setPath("/");
         cookie.setMaxAge(60*60);//1小时过期时间
         response.addCookie(cookie);
-        return "xxxx查询所有成绩的接口";//这里不能直接返回index页面，没有数据，这里要xxxx查询所有成绩的接口
+        return "redirect:/score/list";//这里不能直接返回index页面，没有数据，这里要xxxx查询所有成绩的接口
     }
 
+    @GetMapping("/")
+    public String denglu(){
+        return "redirect:/score/list";
+    }
 
 
 }

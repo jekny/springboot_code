@@ -13,7 +13,7 @@
 <div class="box">
   <h2 >学生成绩管理系统</h2>
   <p class="msg" th:text="${msg}" th:if="${msg!=null}"></p>
-  <form th:action="@{/admin/login}" method="post">
+  <form th:action="@{/login}" method="post">
     <p><input name="username" placeholder="账号"/></p>
     <p><input type="password" name="password" placeholder="密码"/></p>
     <p><button type="submit">登录</button></p>
