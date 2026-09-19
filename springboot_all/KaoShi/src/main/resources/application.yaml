@@ -1,0 +1,18 @@
+spring:
+  application:
+      name: KaoShi
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/student_manager?serverTimeZone=Asia/ShangHai&useUnicode=true
+    username: root
+    password: 1234
+
+
+  mybatis-plus:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.example.kaoshi.entity
+    configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #考上面部分及这里
+    global-config:
+      db-config:
+        id-type: auto
