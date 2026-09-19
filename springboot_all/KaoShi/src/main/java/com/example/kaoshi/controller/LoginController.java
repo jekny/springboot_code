@@ -43,15 +43,15 @@ public class LoginController {
             model.addAttribute("msg","用户不存在或密码错误");
             return "login";
         }else {
-
+//使用Jwt生成token
+            String token = JwtUtil.createToken(dbUser.getId());
+            Cookie cookie = new Cookie("token", token);
+            cookie.setPath("/");
+            cookie.setMaxAge(60*60);//1小时过期时间
+            response.addCookie(cookie);
+            return "redirect:/score/list";//这里不能直接返回index页面，没有数据，这里要xxxx查询所有成绩的接口
         }
-        //使用Jwt生成token
-        String token = JwtUtil.createToken(dbUser.getId());
-        Cookie cookie = new Cookie("token", token);
-        cookie.setPath("/");
-        cookie.setMaxAge(60*60);//1小时过期时间
-        response.addCookie(cookie);
-        return "redirect:/score/list";//这里不能直接返回index页面，没有数据，这里要xxxx查询所有成绩的接口
+
     }
 
     @GetMapping("/")
