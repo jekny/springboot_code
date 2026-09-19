@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springbootClassKaoShi" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -11,6 +14,7 @@
         <option value="$PROJECT_DIR$/springboot_009/pom.xml" />
         <option value="$PROJECT_DIR$/springboot009/pom.xml" />
         <option value="$PROJECT_DIR$/springboot010/pom.xml" />
+        <option value="$PROJECT_DIR$/KaoShi/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

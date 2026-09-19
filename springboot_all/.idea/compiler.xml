@@ -9,14 +9,16 @@
         <module name="springboot009" />
         <module name="springboot_005" />
         <module name="springboot007" />
-        <module name="springboot010" />
         <module name="springboot008" />
+        <module name="springboot010" />
         <module name="springboot006" />
+        <module name="KaoShi" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="KaoShi" options="-parameters" />
       <module name="springboot006" options="-parameters" />
       <module name="springboot007" options="-parameters" />
       <module name="springboot008" options="-parameters" />
