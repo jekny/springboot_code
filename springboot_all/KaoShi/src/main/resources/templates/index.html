@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>学生成绩管理</title>
+  <style>
+    body{text-align:center;margin:20px;}
+    table{margin:20px auto;border-collapse:collapse;}
+    th,td{border:1px solid #ccc;padding:8px 16px;}
+  </style>
+</head>
+<body>
+<h2>学生成绩管理系统</h2>
+
+<table>
+  <tr>
+    <th>ID</th><th>学号</th><th>姓名</th><th>课程</th><th>分数</th><th>班级</th><th>学期</th><th>操作</th>
+  </tr>
+  <tr th:each="s:${scoreList}">
+    <td th:text="${s.id}"></td>
+    <td th:text="${s.studentNo}"></td>
+    <td th:text="${s.studentName}"></td>
+    <td th:text="${s.courseName}"></td>
+    <td th:text="${s.score}"></td>
+    <td th:text="${s.className}"></td>
+    <td th:text="${s.semester}"></td>
+    <td>
+      <a th:href="@{/score/detail(id=${s.id})}">详情</a>
+      <a th:href="@{/score/delete(id=${s.id})}" onclick="return confirm('确认删除？')">删除</a>
+    </td>
+  </tr>
+</table>
+
+<h3>新增成绩</h3>
+<form th:action="@{/score/add}" method="post">
+  <p>学号：<input name="studentNo"></p>
+  <p>姓名：<input name="studentName"></p>
+  <p>课程：<input name="courseName"></p>
+  <p>分数：<input name="score"></p>
+  <p>班级：<input name="className"></p>
+  <p>学期：<input name="semester"></p>
+  <p><button type="submit">提交新增</button></p>
+</form>
+</body>
+</html>

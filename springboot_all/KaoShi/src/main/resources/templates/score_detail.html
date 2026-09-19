@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>成绩详情</title>
+  <style>
+    body{text-align:center;margin:20px;}
+    .detail{width:300px;margin:20px auto;text-align:left;}
+  </style>
+</head>
+<body>
+<h2>学生成绩管理系统</h2>
+
+<h3>成绩详情</h3>
+<div class="detail">
+  <p>ID：<b th:text="${score.id}"></b></p>
+  <p>学号：<b th:text="${score.studentNo}"></b></p>
+  <p>姓名：<b th:text="${score.studentName}"></b></p>
+  <p>课程：<b th:text="${score.courseName}"></b></p>
+  <p>分数：<b th:text="${score.score}"></b></p>
+  <p>班级：<b th:text="${score.className}"></b></p>
+  <p>学期：<b th:text="${score.semester}"></b></p>
+</div>
+<p><a th:href="@{/score/list}">返回列表</a></p>
+</body>
+</html>
