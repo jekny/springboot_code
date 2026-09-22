@@ -1,15 +1,14 @@
-package com.example.mytest;
+package com.demo.logsystem;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.example.mytest.mapper")
-public class MytestApplication {
+@MapperScan("com.demo.logsystem.mapper")
+public class LogSystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MytestApplication.class, args);
+        SpringApplication.run(LogSystemApplication.class, args);
     }
-
 }

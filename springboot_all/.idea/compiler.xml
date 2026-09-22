@@ -12,6 +12,7 @@
         <module name="springboot007" />
         <module name="springboot008" />
         <module name="springboot010" />
+        <module name="log-system-demo" />
         <module name="springboot006" />
         <module name="KaoShi" />
       </profile>
@@ -20,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="KaoShi" options="-parameters" />
+      <module name="log-system-demo" options="-parameters" />
       <module name="mytest" options="-parameters" />
       <module name="springboot006" options="-parameters" />
       <module name="springboot007" options="-parameters" />

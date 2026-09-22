@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.logsystem.mapper.AlertRuleMapper">
+
+    <!-- F-04 告警功能: 新增告警规则 -->
+    <insert id="insert" parameterType="com.demo.logsystem.entity.AlertRule"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO alert_rule (rule_name, keyword, log_level, threshold, time_window, alert_level, enabled)
+        VALUES (#{ruleName}, #{keyword}, #{logLevel}, #{threshold}, #{timeWindow}, #{alertLevel}, #{enabled})
+    </insert>
+
+    <!-- 修改告警规则 -->
+    <update id="update" parameterType="com.demo.logsystem.entity.AlertRule">
+        UPDATE alert_rule
+        SET rule_name   = #{ruleName},
+            keyword     = #{keyword},
+            log_level   = #{logLevel},
+            threshold   = #{threshold},
+            time_window = #{timeWindow},
+            alert_level = #{alertLevel},
+            enabled     = #{enabled}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除告警规则 -->
+    <delete id="deleteById">
+        DELETE FROM alert_rule WHERE id = #{id}
+    </delete>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultType="com.demo.logsystem.entity.AlertRule">
+        SELECT id, rule_name, keyword, log_level, threshold, time_window,
+               alert_level, enabled, create_time, update_time
+        FROM alert_rule
+        WHERE id = #{id}
+    </select>
+
+    <!-- 查询所有告警规则 -->
+    <select id="selectAll" resultType="com.demo.logsystem.entity.AlertRule">
+        SELECT id, rule_name, keyword, log_level, threshold, time_window,
+               alert_level, enabled, create_time, update_time
+        FROM alert_rule
+        ORDER BY id DESC
+    </select>
+
+    <!-- 查询启用的告警规则 -->
+    <select id="selectEnabledRules" resultType="com.demo.logsystem.entity.AlertRule">
+        SELECT id, rule_name, keyword, log_level, threshold, time_window,
+               alert_level, enabled, create_time, update_time
+        FROM alert_rule
+        WHERE enabled = 1
+        ORDER BY id DESC
+    </select>
+
+</mapper>

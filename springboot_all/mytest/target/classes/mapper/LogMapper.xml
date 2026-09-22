@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件,专门写sql语句的文件,映射成对象-->
+<mapper namespace="com.example.mytest.mapper.LogMapper">
+    <select id="getLog" resultType="Log">
+        select id,name,info from log
+    </select>
+</mapper>

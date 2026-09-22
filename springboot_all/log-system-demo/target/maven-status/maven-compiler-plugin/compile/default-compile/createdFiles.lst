@@ -1,0 +1,11 @@
+com\demo\logsystem\mapper\AlertRuleMapper.class
+com\demo\logsystem\entity\AlertRule.class
+com\demo\logsystem\service\LogService.class
+com\demo\logsystem\mapper\LogMapper.class
+com\demo\logsystem\controller\AlertRuleController.class
+com\demo\logsystem\LogSystemApplication.class
+com\demo\logsystem\common\PageResult.class
+com\demo\logsystem\controller\LogController.class
+com\demo\logsystem\entity\SysLog.class
+com\demo\logsystem\service\AlertRuleService.class
+com\demo\logsystem\common\Result.class
